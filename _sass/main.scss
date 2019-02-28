@@ -11,8 +11,8 @@
     font-family: 'Brandon Grotesque';
     src:
         local('BrandonGrotesque-Medium'),
-        url('../BrandonGrotesque-Medium.woff2') format('woff2'),
-        url('../BrandonGrotesque-Medium.woff') format('woff');
+        url('assets/fonts/BrandonGrotesque-Medium.woff2') format('woff2'),
+        url('assets/fonts/BrandonGrotesque-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
@@ -21,8 +21,8 @@
     font-family: 'Brandon Grotesque';
     src:
         local('BrandonGrotesque-Light'),
-        url('../BrandonGrotesque-Light.woff2') format('woff2'),
-        url('../BrandonGrotesque-Light.woff') format('woff');
+        url('assets/fonts/BrandonGrotesque-Light.woff2') format('woff2'),
+        url('assets/fonts/BrandonGrotesque-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
