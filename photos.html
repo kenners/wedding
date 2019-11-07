@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Louise &amp; Kenrick's Wedding</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <section class="hero hero-image is-fullheight is-dark">
+      <div class="hero-head">
+          <nav class="level">
+              <h1 class="subtitle is-1 level-item has-text-centered lk-title-bg">
+                  Louise &amp; Kenrick
+              </h1>
+          </nav>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+              <h1 class="subtitle is-2">Share your photos!</h1>
+              <p class="content is-medium">
+                We'd love it if you could share any photos and videos you took of the day. Please upload them below. Thanks again for coming and celebrating with us!
+              </p>
+              <div id="drag-drop-area"></div>
+          </div>
+      </div>
+    <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
+    <script>
+    var uppy = Uppy.Core()
+    const Form = Uppy.Form
+    
+    uppy.use(Uppy.DragDrop, { target: '#drag-drop-area' })
+    uppy.use(Uppy.Tus, { endpoint: 'https://kenners.org/tusd/files/' })
+</script>
+    
+  </body>
+</html>
