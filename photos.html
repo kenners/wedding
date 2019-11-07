@@ -29,9 +29,33 @@
     <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
     <script>
     var uppy = Uppy.Core()
+    const Dashboard = Uppy.Dashboard
+    const Tus = Uppy.Tus
     const Form = Uppy.Form
+    const uppy = Uppy({
+      autoProceed: false,
+      restrictions: {
+        maxFileSize: 1000000000,
+        maxNumberOfFiles: 100,
+        minNumberOfFiles: 1,
+        allowedFileTypes: ['image/*', 'video/*']
+  }
+})
+.use(Dashboard, {
+  trigger: '.UppyModalOpenerBtn',
+  inline: true,
+  target: '.DashboardContainer',
+  replaceTargetContent: true,
+  showProgressDetails: true,
+  note: 'Images and video only, 1–100 files, up to 1 GB',
+  height: 470,
+  metaFields: [
+    { id: 'name', name: 'Name', placeholder: 'file name' },
+    { id: 'caption', name: 'Caption', placeholder: 'describe what the image is about' }
+  ],
+  browserBackButtonClose: true
+})
     
-    uppy.use(Uppy.DragDrop, { target: '#drag-drop-area' })
     uppy.use(Uppy.Tus, { endpoint: 'https://kenners.org/tusd/files/' })
 </script>
     
