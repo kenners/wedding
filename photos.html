@@ -28,11 +28,11 @@
       </div>
     <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
     <script>
-    var uppy = Uppy.Core()
+    //var uppy = Uppy.Core()
     //const Dashboard = Uppy.Dashboard
     //const Tus = Uppy.Tus
     //const Form = Uppy.Form
-    const uppy = Uppy({
+    const uppy = Uppy.Core({
       autoProceed: false,
       restrictions: {
         maxFileSize: 1000000000,
@@ -41,7 +41,7 @@
         allowedFileTypes: ['image/*', 'video/*']
   }
 })
-.use(Dashboard, {
+.use(Uppy.Dashboard, {
   inline: true,
   target: '.DashboardContainer',
   replaceTargetContent: true,
