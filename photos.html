@@ -39,7 +39,6 @@
         maxFileSize: 1000000000,
         maxNumberOfFiles: 100,
         minNumberOfFiles: 1,
-        limit: 10,
         allowedFileTypes: ['image/*', 'video/*']
   }
 })
@@ -57,7 +56,11 @@
   browserBackButtonClose: true
 })
     
-    uppy.use(Uppy.Tus, { endpoint: 'https://kenners.org/files/' })
+    uppy.use(Uppy.Tus, { endpoint: 'https://kenners.org/files/',
+                       resume: true,
+                        autoRetry: true,
+                       limit: 10,
+                       retryDelays: [0, 1000, 3000, 5000]})
 </script>
     
   </body>
