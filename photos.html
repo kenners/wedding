@@ -23,7 +23,7 @@
               <p class="content is-medium">
                 We'd love it if you could share any photos and videos you took of the day.</p><p class="content is-medium">Thanks again for coming and celebrating with us!
               </p>
-              <div class="container has-text-centered" id="DashboardContainer"></div>
+              <div class="has-text-centered" id="DashboardContainer"></div>
           </div>
       </div>
     <script src="https://transloadit.edgly.net/releases/uppy/v1.6.0/uppy.min.js"></script>
@@ -39,6 +39,7 @@
         maxFileSize: 1000000000,
         maxNumberOfFiles: 100,
         minNumberOfFiles: 1,
+        limit: 10,
         allowedFileTypes: ['image/*', 'video/*']
   }
 })
